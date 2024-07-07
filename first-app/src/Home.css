@@ -1,23 +1,29 @@
 /* PaytmPayment.css */
+
+/* Base styles */
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0; /* Reset default body margin */
 }
 
 .paytm-container {
   display: flex;
+  flex-direction: column; /* Stack sections vertically on smaller screens */
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 60%;
-  width: 100%;
+  width: 80%; /* Adjusted width for better fit on smaller screens */
+  max-width: 800px; /* Maximum width to prevent overly wide layout */
   padding: 2vh;
   border: 2px solid rgb(64, 125, 179);
   border-radius: 2vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #f0f0f0;
+  margin-bottom: 5vh; /* Increased margin for spacing */
 }
 
 .left-section {
@@ -28,20 +34,23 @@ body {
 
 .product-heading,
 .payment-heading {
-  font-size: 2vw;
+  font-size: 2vw; /* Larger font size for headings */
   color: rgb(64, 125, 179);
   margin-bottom: 2vh;
+  text-align: center;
 }
 
 .product-name {
   font-size: 1.8vw;
   color: #333;
   margin-bottom: 1vh;
+  text-align: center;
 }
 
 .product-description {
   font-size: 1.5vw;
   color: #666;
+  text-align: center;
 }
 
 .right-section {
@@ -49,8 +58,16 @@ body {
   padding: 2vh;
 }
 
+.payment-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .paytm-input {
   margin-bottom: 2vh;
+  text-align: center;
 }
 
 .paytm-label {
@@ -78,6 +95,7 @@ body {
   cursor: pointer;
   font-size: 1.4vw;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .paytm-button:hover {
@@ -90,7 +108,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background-color: #f44336; */
   color: rgb(254, 6, 6);
   font-size: 2vw;
 }
@@ -104,4 +121,90 @@ body {
   cursor: pointer;
   font-size: 1.4vw;
   transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 1024px) {
+  .paytm-container {
+    width: 90%; /* Adjusted width for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paytm-container {
+    width: 95%; /* Adjusted width for smaller tablets */
+  }
+
+  .product-heading,
+  .payment-heading {
+    font-size: 3vw; /* Increase font size for headings on smaller screens */
+  }
+
+  .product-name {
+    font-size: 2.5vw; /* Adjusted font size */
+  }
+
+  .product-description {
+    font-size: 2vw; /* Adjusted font size */
+  }
+
+  .paytm-label {
+    font-size: 1.8vw; /* Adjusted font size */
+  }
+
+  .paytm-input-field,
+  .paytm-input,
+  .payment-form {
+    width: 100%; /* Occupy full width */
+  }
+
+  .paytm-button {
+    font-size: 2vw; /* Adjusted font size */
+    padding: 2vh 4vw; /* Adjusted padding for larger touch area */
+  }
+
+  .go-back-button {
+    font-size: 1.8vw; /* Adjusted font size */
+    padding: 2vh 4vw; /* Adjusted padding for larger touch area */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .paytm-container {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .product-heading,
+  .payment-heading {
+    font-size: 4vw; /* Further increase font size for headings on smaller screens */
+  }
+
+  .product-name {
+    font-size: 3.5vw; /* Adjusted font size */
+  }
+
+  .product-description {
+    font-size: 2.5vw; /* Adjusted font size */
+  }
+
+  .paytm-label {
+    font-size: 2vw; /* Adjusted font size */
+  }
+
+  .paytm-input-field,
+  .paytm-input,
+  .payment-form {
+    width: 100%; /* Occupy full width */
+  }
+
+  .paytm-button {
+    font-size: 3vw; /* Adjusted font size */
+    padding: 3vh 6vw; /* Adjusted padding for larger touch area */
+  }
+
+  .go-back-button {
+    font-size: 2vw; /* Adjusted font size */
+    padding: 3vh 6vw; /* Adjusted padding for larger touch area */
+  }
 }
